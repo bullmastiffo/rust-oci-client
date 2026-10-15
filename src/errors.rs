@@ -6,6 +6,7 @@ pub use crate::digest::DigestError;
 
 /// Errors that can be raised while interacting with an OCI registry
 #[derive(Error, Debug)]
+#[non_exhaustive]
 pub enum OciDistributionError {
     /// Authentication error
     #[error("Authentication failure: {0}")]
